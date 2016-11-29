@@ -1,0 +1,45 @@
+import java.io.*;
+
+class Prime implements Runnable
+{
+    public void run()
+    {
+        int i,m=0,f=0;
+		int n=17;
+		
+        for(i=0;i<=1;i++)
+        try{
+          if(n%i==0)
+				{
+					System.out.println("Number is Prime");
+					f=1;
+                    break;
+				}
+		  if(f==0)
+            System.out.println(n+" Number is not Prime");
+        }catch(ArithmeticException ae){}
+    }
+}
+
+
+class Prime1
+{
+    public static void main(String args[])
+    {
+        
+        {
+            
+            Prime p1=new Prime();
+            Thread t1=new Thread(p1);
+            t1.start();
+        }
+        
+    }
+}
+
+
+
+Output:
+       Number is Prime
+
+	   
